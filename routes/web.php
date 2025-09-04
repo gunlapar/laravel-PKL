@@ -1,7 +1,5 @@
 <?php
+use App\Http\Controllers\DataSiswaController;
 
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DataSiswaController::class, 'index']);
+Route::resource('siswa', DataSiswaController::class);
